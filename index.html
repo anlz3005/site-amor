@@ -1,0 +1,162 @@
+
+index.html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Você 🤍</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8f6f2;
+    color: #333;
+    text-align: center;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+.hero {
+    background: #ffffff;
+}
+
+.hero img {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.dividido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.dividido img {
+    width: 80%;
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+@media(min-width: 768px) {
+    .dividido {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+    .dividido div {
+        max-width: 400px;
+    }
+}
+
+.botao-coracao {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.botao-coracao:hover {
+    transform: scale(1.2);
+}
+
+.mensagem-final {
+    display: none;
+    font-size: 20px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1️⃣ Tela Inicial -->
+<section class="hero">
+    <h1>Tem sentimentos que não fazem barulho.<br>Só permanecem.</h1>
+    <img src="imagens/foto-principal.jpg" alt="Nossa foto principal">
+</section>
+
+<!-- 2️⃣ Galeria -->
+<section>
+    <h2>Nós</h2>
+    <p>Guardei cada instante como quem guarda algo raro.</p>
+
+    <div class="galeria">
+        <img src="imagens/foto1.jpg" alt="">
+        <img src="imagens/foto2.jpg" alt="">
+        <img src="imagens/foto3.jpg" alt="">
+        <img src="imagens/foto4.jpg" alt="">
+    </div>
+</section>
+
+<!-- 3️⃣ Saudade -->
+<section class="dividido">
+    <img src="imagens/foto-lateral.jpg" alt="">
+    <div>
+        <h2>Saudade</h2>
+        <p style="font-size:22px;">
+            Eu não digo muito.<br>
+            Mas você sabe.
+        </p>
+        <p style="font-size:14px; opacity:0.7;">Sempre soube.</p>
+    </div>
+</section>
+
+<!-- 4️⃣ Mesmo de Longe -->
+<section>
+    <img src="imagens/foto-espontanea.jpg" style="width:80%; max-width:350px; border-radius:15px;">
+    <p style="margin-top:20px; font-size:20px;">
+        A distância é só geográfica.<br>
+        Porque o resto continua aqui.
+    </p>
+</section>
+
+<!-- 5️⃣ Final -->
+<section>
+    <h2>
+        Se for pra existir um lugar tranquilo,<br>
+        que seja onde você está.
+    </h2>
+
+    <div class="botao-coracao" onclick="mostrarMensagem()">🤍</div>
+
+    <div class="mensagem-final" id="mensagem">
+        Sinto sua falta.<br>
+        Só isso mesmo.
+    </div>
+</section>
+
+<script>
+function mostrarMensagem() {
+    document.getElementById("mensagem").style.display = "block";
+}
+</script>
+
+</body>
+</html>
